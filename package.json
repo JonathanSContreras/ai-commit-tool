@@ -2,7 +2,28 @@
   "name": "verbatim-commit",
   "version": "0.1.0",
   "description": "Local-first AI commit message generator + low-effort commit verifier",
+  "keywords": [
+    "git",
+    "commit",
+    "commit-message",
+    "git-hooks",
+    "commit-msg",
+    "conventional-commits",
+    "ollama",
+    "local-llm",
+    "ai",
+    "cli"
+  ],
+  "author": "Jonathan Contreras (https://github.com/JonathanSContreras)",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JonathanSContreras/verbatim-commit.git"
+  },
+  "homepage": "https://github.com/JonathanSContreras/verbatim-commit#readme",
+  "bugs": {
+    "url": "https://github.com/JonathanSContreras/verbatim-commit/issues"
+  },
   "type": "module",
   "bin": {
     "verbatim": "./dist/cli.js"
