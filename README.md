@@ -119,7 +119,7 @@ This is a soft nudge, not a hard gate.
 - **Staged diff only.** Generation and the LLM verify pass use `git diff --cached` — exactly what's about to be committed.
 - **Diff budgeting.** The diff is sized to a fraction of the model's context window (lockfiles, binaries, and vendored paths are stripped first). Small diffs are sent in full; large ones are summarized per file with explicit `[N lines omitted]` markers. A complete file-change inventory (added/deleted/renamed) is always included, so even filtered-out binary changes are never invisible to the model.
 - **Repo-aware context.** The branch name and the last few commit subjects are included so output matches your repo's tone.
-- **Two checks.** A fast rule-based pass (word count, low-effort phrases, identical-to-previous) runs always; an optional LLM second-pass ("does this message actually describe the change?") runs only if you enable it.
+- **Two checks.** A fast rule-based pass runs always; an optional LLM second-pass ("does this message actually describe the change?") runs only if you enable it. The rule-based pass flags a subject that is empty, matches a low-effort phrase (`wip`, `fix`, `stuff`, …), is made entirely of vague words (`fix stuff`), falls under `minWordCount`, is written in ALL CAPS, trails off with an ellipsis, or is identical to the previous commit's subject.
 
 ## Configuration
 
